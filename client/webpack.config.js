@@ -6,6 +6,7 @@ var config = {
     output: {
         path: path.resolve(__dirname, "dist"),
         filename: "index_bundle.js",
+        // publicPath: "http://localhost:7700/dist"
         publicPath: "/"
     },
     module: {
@@ -17,8 +18,16 @@ var config = {
     },
     devtool: 'sourcemap',
     devServer: {
+        // hot: true,
+        // inline: true,
+        // port: 7700,
         historyApiFallback: true
     },
+    // externals: {
+    //     'cheerio': 'window',
+    //     'react/lib/ExecutionEnvironment': true,
+    //     'react/lib/ReactContext': true
+    // },
     plugins: [
         new HtmlWebpackPlugin ({
             template: 'app/index.html'

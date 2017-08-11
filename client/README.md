@@ -43,14 +43,13 @@ Bonus points if you can provide this feature:
 - user can *remove image / text* simply double clicking it.
 - user can *move the image / text* around the canvas like normal drag and drop.
 
-## How to Submit
+## Unit Testing
 
-- Zip your working folder with the name `<your name>-piktojstest`
+This is really easy, but you need to read this first
 
-- Exclude `node_modules` folder from the zip
+- Before you the the above, please uncomment the commented line in webpack.config.js because it will interrupt with actual website.
+- To run automated testing with mocha simply go to client directory where webpack.config.js is located and type "NPM run test" or "yarn test"
+- You should see automated testing being generated
+- to run and see actual website editor simply comment those lines back again a bit troublesome but will worth taking note of it :)
 
-- If you're using github or any code management tools, you can pass us the link
-
-- You have **one day** to complete the test. If you are not able to finish, do send us whatever you have done, we will evaluate accordingly. If you need more time to fulfill all the features and requirements, we can give you **an extra day**
-
-Have fun programming 😊
+Check out my [GitHub](https://github.com/JaenalLeeGenMao/picto-editor) all the files are uploaded there 😊.
