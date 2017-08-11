@@ -1,0 +1,200 @@
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	margin: 0;
+}
+
+h1 {
+    padding: 10px;
+	margin: 0;
+}
+
+a {
+    color: hsl(30, 5%, 29%);
+    text-decoration: none;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: Black;
+	font-family: sans-serif;
+	font-size: 17.6px;
+	font-size: 1.1rem;
+	font-weight: 300;
+	line-height: 1.5;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+	background-color: hsl(0, 0%, 100%);
+    border-color: hsl(0, 0%, 80%);
+    cursor: pointer;
+    font-weight: normal;
+    line-height: 1.25;
+	width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid hsla(0, 0%, 0%, 0);
+    padding: 0.5rem 1rem;
+	margin: 0;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.site {
+	/*margin-top: auto;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "title title"
+        "main main"
+        "footer footer";
+}
+
+/* title content */
+.page-title {
+    /*background-color: lightblue;*/
+    grid-area: title;
+	text-align: center;
+	background-image: url(https://2017.europe.wordcamp.org/files/2017/01/background-pattern-01.png);
+	background-color: hsl(31, 51%, 92%);
+	color: #404040;
+}
+
+/* main content */
+.main-content {
+    /*background-color: green;*/
+    grid-area: main;
+	padding: 1.5em;
+}
+
+.main-content > .canvas {
+	width: 100%;
+	height: 600px;
+    border: 1px solid;
+    box-shadow: 0px 0px 5px black;;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+/* footer content */
+.footer {
+    background-color: #22262A;
+	color: white;
+    grid-area: footer;
+	padding: 2em;
+}
+
+.footer > a {
+    text-decoration: none;
+}
+
+.footer > a:hover {
+    opacity: 0.9;
+}
+
+@media (min-width:34em) {
+    .navbar {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+/* Facebook */
+.facebook {
+    font-size: 1.5em;
+    color: white;
+    background: #3B5998;
+	-webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+	border-radius: 6px;
+    padding: 10px 15px;
+    margin: 0 0.25em;
+}
+
+/* Twitter */
+.twitter {
+    font-size: 1.5em;
+    color: white;
+    background: #55ACEE;
+	-webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+	border-radius: 6px;
+    padding: 10px;
+    margin: 0 0.25em;
+}
+
+/* GitHub */
+.github {
+    font-size: 1.5em;
+    color: white;
+    background: #444;
+	-webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+	border-radius: 6px;
+    padding: 10px;
+    margin: 0 0.25em;
+}
+
+/*.modal-dialog {
+    max-width: 60%;
+    margin: 30px auto;
+}*/
+
+.modalDisplays {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.draggable {
+    width: 150px;
+    height: 150px;
+	/*border: 1px double grey;*/
+	/*border-radius: 35px;*/
+	cursor: move;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.draggable img {
+    width: inherit;
+    height: auto;
+	cursor: move;
+    padding: 0.5em;
+	border: 1px double grey;
+	border-radius: 35px;
+}
+
+.draggable span {
+    width: inherit;
+    height: auto;
+	cursor: move;
+	padding: 0.5em;
+}
