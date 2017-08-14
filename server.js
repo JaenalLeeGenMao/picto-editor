@@ -4,6 +4,7 @@ const express = require( 'express' );
 const multer = require( 'multer' );
 const fs = require( 'fs' );
 const junk = require( 'junk' );
+const bodyParser = require('body-parser');
 let app = express();
 
 //Grant access allowing both server and client to run in localhost
@@ -20,6 +21,9 @@ var allowCrossDomainMiddleWare = (req, res, next) => {
   }
 }
 app.use(allowCrossDomainMiddleWare);
+
+
+app.use(bodyParser());
 
 app.use( express.static('./') );
 
@@ -56,13 +60,14 @@ let upload = multer( {
 
 // route for file upload
 app.post( '/uploads', ( req, res ) => {
+    console.log(req);
   upload( req, res, err => {
     if ( err ) {
       console.log( err )
       res.status(400).json( {message: err} );
     } else {
       res.status(200).json( {
-        file: req.protocol + '://' + req.get('host') + '/images/' + req.query.filename
+        file: req.protocol + '://' + req.get('host') + '/images/' + req.body.filename
       } )
     }
   })

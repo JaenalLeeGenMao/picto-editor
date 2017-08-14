@@ -80,7 +80,8 @@ class Playground extends React.Component {
 
         var files = this.state.files;
         // console.log(file.name);
-        axios.post("http://localhost:8000/uploads?filename="+ file).then(function(response) {
+        // axios.post("http://localhost:8000/uploads?filename="+ file).then(function(response) {
+        axios.post("http://localhost:8000/uploads/", {filename: file}).then(function(response) {
             console.log(file.substr(file.length - 3))
             if (file.substr(file.length - 3) === "png" ) {
                 alert("successfully uploaded")
