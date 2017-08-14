@@ -9,7 +9,7 @@
   },
   "homepage": "https://github.com/JaenalLeeGenMao",
   "scripts": {
-    "test": "mocha -w test/helpers/browser.js test/*.spec.js",
+    "test": "mocha --compilers js:babel-core/register -w test/helpers/browser.js test/*.js",
     "dev:hot": "webpack-dev-server --hot --inline --progress --colors --watch --content-base ./",
     "create": "webpack",
     "start": "webpack-dev-server --open"
@@ -50,15 +50,18 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "chai": "^4.1.1",
     "css-loader": "^0.28.4",
+    "enzyme": "^2.9.1",
     "file-loader": "^0.11.2",
     "html-webpack-plugin": "^2.30.1",
     "jsdom": "^11.1.0",
     "mocha": "^3.5.0",
+    "mocha-jsdom": "^1.1.0",
     "react-addons-test-utils": "^15.6.0",
     "style-loader": "^0.18.2",
     "url-loader": "^0.5.9",
-    "webpack": "^3.5.2",
+    "webpack": "^3.5.4",
     "webpack-dev-server": "^2.7.1"
   }
 }
