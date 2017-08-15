@@ -1,14 +1,14 @@
 // import jsdom from 'jsdom';
-import assert from 'assert';
+var assert = require('assert');
 
 var expect = require('chai').expect;
 var mount = require('enzyme').mount;
 var shallow = require('enzyme').shallow;
 
 // Important
-var jsdom = require('mocha-jsdom');
-var rerequire = jsdom.rerequire;
-var $ = rerequire('jquery');
+// var jsdom = require('mocha-jsdom');
+// var rerequire = jsdom.rerequire;
+// var $ = rerequire('jquery');
 
 
 describe('<Playground/>', function() {
@@ -16,12 +16,12 @@ describe('<Playground/>', function() {
     let React, utils;
 
 
-    global.jQuery = $ = rerequire('jquery')
-
-    global.window = document;
-    global.navigator = {
-        userAgent: 'node.js'
-    };
+    // global.jQuery = $ = rerequire('jquery')
+    //
+    // global.window = document;
+    // global.navigator = {
+    //     userAgent: 'node.js'
+    // };
 
     React = require('react');
     utils = require('react-addons-test-utils');
@@ -56,12 +56,12 @@ describe('<AddTextModal>', function() {
     let React, utils;
 
 
-    global.jQuery = $ = rerequire('jquery')
-
-    global.window = document;
-    global.navigator = {
-        userAgent: 'node.js'
-    };
+    // global.jQuery = $ = rerequire('jquery')
+    //
+    // global.window = document;
+    // global.navigator = {
+    //     userAgent: 'node.js'
+    // };
 
     React = require('react');
     utils = require('react-addons-test-utils');
@@ -90,12 +90,12 @@ describe('<UploadImageModal>', function() {
     let React, utils;
 
 
-    global.jQuery = $ = rerequire('jquery')
-
-    global.window = document;
-    global.navigator = {
-        userAgent: 'node.js'
-    };
+    // global.jQuery = $ = rerequire('jquery')
+    //
+    // global.window = document;
+    // global.navigator = {
+    //     userAgent: 'node.js'
+    // };
 
     React = require('react');
     utils = require('react-addons-test-utils');
